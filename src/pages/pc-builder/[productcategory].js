@@ -2,6 +2,10 @@ import CategoryCard from "@/components/shared/CategoryCard";
 import React from "react";
 
 const ProductCategory = ({ products }) => {
+  console.log(products);
+  if (!products && products?.data?.length === 0) {
+    return <span className="loading loading-dots loading-lg"></span>;
+  }
   return (
     <div>
       {" "}

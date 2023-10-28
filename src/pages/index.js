@@ -89,9 +89,10 @@ const HomePage = ({ products }) => {
   );
 };
 
+export default HomePage;
+
 export async function getStaticProps() {
   const res = await fetch("http://localhost:3000/api/product?limit=6");
   const data = await res.json();
   return { props: { products: data } };
 }
-export default HomePage;
